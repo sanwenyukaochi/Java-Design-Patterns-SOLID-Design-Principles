@@ -22,12 +22,17 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    testImplementation 'org.projectlombok:lombok:1.18.34'
-    compileOnly 'org.projectlombok:lombok:1.18.34'
-    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+    dependencies {
+        compileOnly 'org.projectlombok:lombok:1.18.34'
+        annotationProcessor 'org.projectlombok:lombok:1.18.34'
+        testImplementation 'org.projectlombok:lombok:1.18.34'
+    }
     
-    implementation 'org.slf4j:slf4j-api:1.7.36'
-    runtimeOnly 'ch.qos.logback:logback-classic:1.5.13'
+    dependencies {
+        implementation 'org.slf4j:slf4j-api:2.0.12'
+        implementation 'ch.qos.logback:logback-classic:1.5.13'
+    }
+
 }
 
 tasks.named('test') {

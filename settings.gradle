@@ -1,2 +1,3 @@
 rootProject.name = 'design'
-include("builder")
+include 'builder'
+include 'simple-factory'

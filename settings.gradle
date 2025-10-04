@@ -1,3 +1,4 @@
 rootProject.name = 'design'
 include 'builder'
 include 'simple-factory'
+include 'factory-method'

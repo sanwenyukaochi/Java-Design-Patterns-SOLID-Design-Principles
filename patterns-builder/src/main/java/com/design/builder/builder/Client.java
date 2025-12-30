@@ -5,12 +5,12 @@ import java.time.LocalDate;
 //This is our client which also works as "director"
 public class Client {
 
-	public static void main(String[] args) {
+	static void main() {
 		User user = createUser();
 		UserDTOBuilder builder = new UserWebDTOBuilder();
 		//Client has to provide director with concrete builder
 		UserDTO dto = directBuild(builder, user);
-		System.out.println(dto);
+		IO.println(dto);
 	}
 	
 	/**

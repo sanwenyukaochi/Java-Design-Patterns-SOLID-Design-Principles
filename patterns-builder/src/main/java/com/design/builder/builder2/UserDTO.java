@@ -2,11 +2,12 @@ package com.design.builder.builder2;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.temporal.ChronoUnit;
 
 import com.design.builder.builder.Address;
+import lombok.Getter;
 
 //Product class
+@Getter
 public class UserDTO {
 
 	private String name;
@@ -15,19 +16,7 @@ public class UserDTO {
 	
 	private String age;
 
-	public String getName() {
-		return name;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public String getAge() {
-		return age;
-	}
-	
-	private void setName(String name) {
+    private void setName(String name) {
 		this.name = name;
 	}
 
@@ -58,7 +47,8 @@ public class UserDTO {
 		
 		private String address;
 		
-		private UserDTO userDTO;
+		@Getter
+        private UserDTO userDTO;
 		
 		public UserDTOBuilder withFirstName(String fname) {
 			this.firstName = fname;
@@ -89,9 +79,6 @@ public class UserDTO {
 			userDTO.setAge(age);
 			return this.userDTO;
 		}
-		
-		public UserDTO getUserDTO() {
-			return this.userDTO;
-		}
-	}
+
+    }
 }

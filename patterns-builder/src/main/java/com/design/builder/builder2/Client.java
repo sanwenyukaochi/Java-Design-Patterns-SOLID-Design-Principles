@@ -8,11 +8,11 @@ import com.design.builder.builder2.UserDTO.UserDTOBuilder;
 
 public class Client {
 
-	public static void main(String[] args) {
+	static void main() {
 		User user = createUser();
 		// Client has to provide director with concrete builder
 		UserDTO dto = directBuild(UserDTO.getBuilder(), user);
-		System.out.println(dto);
+		IO.println(dto);
 	}
 
 	/**

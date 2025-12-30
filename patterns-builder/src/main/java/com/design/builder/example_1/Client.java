@@ -1,4 +1,4 @@
-package com.design.builder.example;
+package com.design.builder.example_1;
 
 public class Client {
 

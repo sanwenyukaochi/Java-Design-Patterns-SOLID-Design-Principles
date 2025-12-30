@@ -1,6 +1,9 @@
 package com.design.builder.builder;
 
+import lombok.Getter;
+
 //A product in builder pattern
+@Getter
 public class UserWebDTO implements UserDTO {
 
 	private String name;
@@ -14,20 +17,8 @@ public class UserWebDTO implements UserDTO {
 		this.address = address;
 		this.age = age;
 	}
-	
-	public String getName() {
-		return name;
-	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public String getAge() {
-		return age;
-	}
-
-	@Override
+    @Override
 	public String toString() {
 		return "name=" + name + "\nage=" + age + "\naddress=" + address ;
 	}

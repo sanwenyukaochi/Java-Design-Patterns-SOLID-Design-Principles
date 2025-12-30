@@ -2,10 +2,10 @@ package com.design.simplefactory;
 
 public class Client {
 
-	public static void main(String[] args) {
-		Post post = PostFactory.createPost("news");
-		System.out.println(post);
-
-	}
+    static void main(String[] args) {
+        BlogPost blogPost = (BlogPost) PostFactory.createPost("blog");
+        NewsPost newsPost = (NewsPost) PostFactory.createPost("news");
+        ProductPost productPost = (ProductPost) PostFactory.createPost("product");
+    }
 
 }

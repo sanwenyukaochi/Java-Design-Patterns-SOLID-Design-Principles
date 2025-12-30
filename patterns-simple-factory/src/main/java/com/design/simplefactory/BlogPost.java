@@ -1,30 +1,15 @@
 package com.design.simplefactory;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Represents a blog post. 
  * 
  */
+@Setter
+@Getter
 public class BlogPost extends Post {
-
 	private String author;
-	
 	private String[] tags;
-
-	public String getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-	public String[] getTags() {
-		return tags;
-	}
-
-	public void setTags(String[] tags) {
-		this.tags = tags;
-	}
-	
-	
 }

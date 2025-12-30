@@ -5,16 +5,16 @@ import com.design.abstractfactory.Instance.Capacity;
 import com.design.abstractfactory.ResourceFactory;
 import com.design.abstractfactory.Storage;
 //Factory implementation for Google cloud platform resources
-public class AwsResourceFactory implements ResourceFactory {
+public class AmazonResourceFactory implements ResourceFactory {
 
 	@Override
 	public Instance createInstance(Capacity capacity) {
-		return new Ec2Instance(capacity);
+		return new AmazonComputeEngineInstance(capacity);
 	}
 
 	@Override
 	public Storage createStorage(int capMib) {
-		return new S3Storage(capMib);
+		return new AmazonCloudStorage(capMib);
 	}
 
 

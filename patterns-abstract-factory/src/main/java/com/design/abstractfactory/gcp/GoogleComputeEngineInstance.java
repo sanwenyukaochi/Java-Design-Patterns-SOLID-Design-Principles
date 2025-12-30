@@ -1,6 +1,5 @@
 package com.design.abstractfactory.gcp;
 
-
 import com.design.abstractfactory.Instance;
 import com.design.abstractfactory.Storage;
 
@@ -9,22 +8,22 @@ public class GoogleComputeEngineInstance implements Instance {
 
     public GoogleComputeEngineInstance(Capacity capacity) {
         //Map capacity to GCP compute instance types. Use GCP API to provision
-        System.out.println("Created Google Compute Engine instance");
+        IO.println("Created Google Compute Engine instance");
     }
 
     @Override
     public void start() {
-        System.out.println("Compute engine instance started");
+        IO.println("Google Compute engine instance started");
     }
 
     @Override
     public void attachStorage(Storage storage) {
-        System.out.println("Attached " + storage + " to Compute engine instance");
+        IO.println("Attached " + storage + " to Google Compute engine instance");
     }
 
     @Override
     public void stop() {
-        System.out.println("Compute engine instance stopped");
+        IO.println("Google Compute engine instance stopped");
     }
 
     @Override

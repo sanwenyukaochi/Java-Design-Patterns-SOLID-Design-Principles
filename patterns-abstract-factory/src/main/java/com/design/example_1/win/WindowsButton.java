@@ -5,6 +5,6 @@ import com.design.example_1.Button;
 public class WindowsButton implements Button {
     @Override
     public void render() {
-        System.out.println("渲染Windows风格按钮");
+        IO.println("Render Windows OS style buttons");
     }
 }

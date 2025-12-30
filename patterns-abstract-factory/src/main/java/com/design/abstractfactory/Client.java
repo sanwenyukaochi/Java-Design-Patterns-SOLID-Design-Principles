@@ -1,7 +1,7 @@
 package com.design.abstractfactory;
 
 import com.design.abstractfactory.Instance.Capacity;
-import com.design.abstractfactory.aws.AwsResourceFactory;
+import com.design.abstractfactory.aws.AmazonResourceFactory;
 import com.design.abstractfactory.gcp.GoogleResourceFactory;
 
 public class Client {
@@ -19,20 +19,16 @@ public class Client {
         return instance;
     }
 
-    public static void main(String[] args) {
-        Client aws = new Client(new AwsResourceFactory());
+    static void main() {
+        Client aws = new Client(new AmazonResourceFactory());
         Instance i1 = aws.createServer(Capacity.micro, 20480);
         i1.start();
         i1.stop();
-
-        System.out.println("***************************************");
 
         Client gcp = new Client(new GoogleResourceFactory());
         Instance i2 = gcp.createServer(Capacity.micro, 20480);
         i2.start();
         i2.stop();
-
     }
-
 
 }

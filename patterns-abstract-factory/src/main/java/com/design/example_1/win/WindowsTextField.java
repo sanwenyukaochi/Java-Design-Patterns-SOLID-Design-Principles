@@ -6,6 +6,6 @@ import com.design.example_1.TextField;
 public class WindowsTextField implements TextField {
     @Override
     public void input() {
-        System.out.println("Windows文本框输入");
+        IO.println("Windows OS text box input");
     }
 }

@@ -6,6 +6,6 @@ import com.design.example_1.Button;
 public class MacOSButton implements Button {
     @Override
     public void render() {
-        System.out.println("渲染MacOS风格按钮");
+        IO.println("Rendering macOS style buttons");
     }
 }

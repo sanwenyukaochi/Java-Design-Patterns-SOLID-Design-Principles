@@ -1,34 +1,33 @@
 package com.design.abstractfactory.aws;
 
-
 import com.design.abstractfactory.Instance;
 import com.design.abstractfactory.Storage;
 
 //Represents a concrete product in a family "Amazon Web services"
-public class Ec2Instance implements Instance {
+public class AmazonComputeEngineInstance implements Instance {
 
-    public Ec2Instance(Capacity capacity) {
+    public AmazonComputeEngineInstance(Capacity capacity) {
         //Map capacity to ec2 instance types. Use aws API to provision
-        System.out.println("Created Ec2Instance");
+        IO.println("Created Amazon Compute Engine instance");
     }
 
     @Override
     public void start() {
-        System.out.println("Ec2Instance started");
+        IO.println("Amazon Compute engine instance started");
     }
 
     @Override
     public void attachStorage(Storage storage) {
-        System.out.println("Attached " + storage + " to Ec2Instance");
+        IO.println("Attached " + storage + " to Amazon Compute engine instance");
     }
 
     @Override
     public void stop() {
-        System.out.println("Ec2Instance stopped");
+        IO.println("Amazon Compute engine instance stopped");
     }
 
     @Override
     public String toString() {
-        return "EC2Instance";
+        return "AmazonComputeEngineInstance";
     }
 }

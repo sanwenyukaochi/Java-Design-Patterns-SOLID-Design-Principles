@@ -6,6 +6,6 @@ import com.design.example_1.TextField;
 public class MacOSTextField implements TextField {
     @Override
     public void input() {
-        System.out.println("MacOS文本框输入");
+        IO.println("MacOS text input");
     }
 }

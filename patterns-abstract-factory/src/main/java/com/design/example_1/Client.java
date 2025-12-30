@@ -16,7 +16,7 @@ public class Client {
         return new UI(button, textField);
     }
 
-    static void main(String[] args) {
+    static void main() {
         Client winApp = new Client(new WindowsFactory());
         UI winUI = winApp.createUI();
         winUI.render();

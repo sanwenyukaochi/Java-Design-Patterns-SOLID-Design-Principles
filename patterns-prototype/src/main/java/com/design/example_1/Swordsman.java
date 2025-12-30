@@ -7,8 +7,6 @@ public class Swordsman extends GameUnit {
 
     private String state = "idle";
 
-
-
     @Override
     public String toString() {
         return String.format("Swordsman [state=%s, position=%s]", state, getPosition());
@@ -18,6 +16,5 @@ public class Swordsman extends GameUnit {
     protected void reset() {
         state = "idle";
     }
-
 
 }

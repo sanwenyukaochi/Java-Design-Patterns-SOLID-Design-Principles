@@ -7,11 +7,7 @@ import lombok.ToString;
 @ToString
 public class Sheep implements Cloneable {
     private String name;
-    public Sheep clone() {
-        try {
-            return (Sheep) super.clone(); // 浅拷贝
-        } catch (CloneNotSupportedException e) {
-            return null;
-        }
+    public Sheep clone() throws CloneNotSupportedException{
+        return (Sheep) super.clone(); // 浅拷贝
     }
 }

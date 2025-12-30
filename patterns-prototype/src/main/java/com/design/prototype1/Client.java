@@ -2,10 +2,12 @@ package com.design.prototype1;
 
 public class Client {
 
-	public static void main(String[] args) {
+	static void main() throws CloneNotSupportedException {
         Sheep dolly = new Sheep();
         dolly.setName("Dolly");
-        Sheep clone = dolly.clone();
+        IO.println(dolly);
+        Sheep dolly_clone = dolly.clone();
+        IO.println(dolly_clone);
 	}
 
 }

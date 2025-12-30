@@ -1,8 +1,6 @@
 package com.design.prototype;
 
-import lombok.ToString;
-
-
+//士兵
 public class Swordsman extends GameUnit {
 
     private String state = "idle";
@@ -20,6 +18,5 @@ public class Swordsman extends GameUnit {
     protected void reset() {
         state = "idle";
     }
-
 
 }

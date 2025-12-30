@@ -1,8 +1,6 @@
 package com.design.prototype;
 
-import lombok.ToString;
-
-//Doesn't support cloning
+//将军 Doesn't support cloning
 public class General extends GameUnit {
 
     private String state = "idle";
